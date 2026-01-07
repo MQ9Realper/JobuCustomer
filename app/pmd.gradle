@@ -1,0 +1,10 @@
+apply plugin: 'pmd'
+
+tasks.register('pmd', Pmd) {
+    source = fileTree('src/main/java/')
+
+    reports {
+        html.required.set(true) // Enable HTML report
+        xml.required.set(false) // Disable XML report
+    }
+}

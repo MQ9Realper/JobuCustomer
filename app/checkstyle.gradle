@@ -1,0 +1,17 @@
+apply plugin: 'checkstyle'
+
+checkstyle {
+    description 'code style check'
+    group 'verification'
+    configFile file("checkstyle/checkstyle.xml")
+    ignoreFailures = false
+    maxWarnings = 0
+}
+
+task checkstyle(type: Checkstyle, group: 'verification') {
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+    exclude '**/R.java'
+    classpath = files()
+}

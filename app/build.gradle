@@ -1,0 +1,116 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.jobu.customer'
+    compileSdk 36
+
+    // Fetch app version from versioning.properties
+    def vCode = 0
+    def vName = 0
+    def major = 0
+    def minor = 0
+    def patch = 0
+
+    def versionPropsFile = file('versioning.properties')
+    if (versionPropsFile.canRead()) {
+        Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionPropsFile))
+
+        patch = versionProps['PATCH'].toInteger()
+        major = versionProps['MAJOR'].toInteger()
+        minor = versionProps['MINOR'].toInteger()
+        vCode = versionProps['VERSION_CODE'].toInteger()
+        vName = "${major}.${minor}.${patch}"
+    }
+
+    defaultConfig {
+        applicationId "com.jobu.customer"
+        minSdk 24
+        targetSdk 36
+        versionCode vCode
+        versionName vName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    lint {
+        abortOnError true
+        checkReleaseBuilds true
+        textReport true
+        textOutput file("lint-results.txt")
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+}
+
+// Gradle task for incrementing version name and version code
+tasks.register('incrementAppVersion') {
+    doLast {
+        def _versionCode = 0
+        def _versionName
+        def _major = 0
+        def _minor = 0
+        def _patch = 0
+
+        def versionPropsFile = file('versioning.properties')
+
+        if (versionPropsFile.canRead()) {
+            Properties versionProps = new Properties()
+
+            versionProps.load(new FileInputStream(versionPropsFile))
+
+            _patch = versionProps['PATCH'].toInteger() + 1
+            _major = versionProps['MAJOR'].toInteger()
+            _minor = versionProps['MINOR'].toInteger()
+            _versionCode = versionProps['VERSION_CODE'].toInteger() + 1
+            _versionName = "${_major}.${_minor}.${_patch}"
+
+            if (_patch == 99) {
+                _patch = 0
+                _minor = _minor + 1
+            }
+            if (_minor == 10) {
+                _minor = 0
+                _major = _major + 1
+            }
+
+            versionProps['MAJOR'] = _major.toString()
+            versionProps['MINOR'] = _minor.toString()
+            versionProps['PATCH'] = _patch.toString()
+            versionProps['VERSION_CODE'] = _versionCode.toString()
+            versionProps.store(versionPropsFile.newWriter(), null)
+            println("The new app version is " + _versionName + " (${_versionCode})")
+        } else {
+            throw new GradleException("Could not read version.properties!")
+        }
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.core.splashscreen
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
