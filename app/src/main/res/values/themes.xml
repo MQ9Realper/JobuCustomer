@@ -21,5 +21,22 @@
         <item name="postSplashScreenTheme">@style/Theme.JobuCustomer</item>
     </style>
 
+    <style name="BottomNavActiveTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="BottomNavInactiveTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/BottomNavActiveTextAppearance</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavInactiveTextAppearance</item>
+    </style>
+
     <style name="Theme.JobuCustomer" parent="Base.Theme.JobuCustomer" />
 </resources>
