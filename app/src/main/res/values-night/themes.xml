@@ -38,4 +38,44 @@
         <item name="itemTextAppearanceInactive">@style/BottomNavInactiveTextAppearance</item>
     </style>
 
+    <style name="TitleTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="BoldSubTitleTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SubTitleTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ListTitleStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ListBodyStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BodyTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BoldBodyTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BodyLightTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
 </resources>
