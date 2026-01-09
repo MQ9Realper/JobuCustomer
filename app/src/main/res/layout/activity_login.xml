@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
@@ -22,17 +23,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/login_with_your_number"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-            android:textColor="@color/black"
-            android:fontFamily="@font/roboto_bold" />
+            android:textColor="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_medium"
-            android:gravity="center"
             android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
             android:text="@string/request_otp_description"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
             android:textColor="@color/grey_50" />
@@ -61,13 +62,14 @@
 
         <TextView
             android:id="@+id/txtForgotPassword"
-            style="@style/BodyTextStyle"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/spacing_medium"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/string_create_account"
-            android:textColor="@color/black" />
+            android:textColor="@color/grey_50" />
 
     </LinearLayout>
 

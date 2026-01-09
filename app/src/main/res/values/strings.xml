@@ -16,7 +16,7 @@
     <string name="phone_number">Phone Number</string>
     <string name="string_create_account">Not registered yet? <u><b>Create Account</b></u></string>
     <string name="otp_verification_description">OTP has been sent to you on your mobile phone. Please enter it below</string>
-    <string name="verify_otp">VERIFY OTP</string>
+    <string name="verify_otp">Verify OTP</string>
     <string name="request_otp">REQUEST OTP</string>
     <string name="login_with_your_number">Login With Your Number</string>
     <string name="request_otp_description">Please enter your mobile number to receive a verification code.</string>
