@@ -1,5 +1,6 @@
 package com.jobu.customer.ui.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
@@ -13,6 +14,9 @@ public class Routing extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     SplashScreen.installSplashScreen(this);
     super.onCreate(savedInstanceState);
+
+    startActivity(new Intent(this, Login.class));
+    finish();
 
   }
 
