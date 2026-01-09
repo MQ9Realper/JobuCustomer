@@ -8,8 +8,10 @@ material = "1.13.0"
 activity = "1.12.2"
 constraintlayout = "2.2.1"
 coreSplashscreen = "1.2.0"
+swiperefreshlayout = "1.2.0"
 
 [libraries]
+swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefreshlayout" }
 core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

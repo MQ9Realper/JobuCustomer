@@ -13,4 +13,5 @@
     <string name="recent_jobs">Recent Jobs</string>
     <string name="no_jobs_found">No Jobs Found</string>
     <string name="no_recent_jobs_description">You have not requested any service yet. Browse our services and book your first job.</string>
+    <string name="search">Search</string>
 </resources>
