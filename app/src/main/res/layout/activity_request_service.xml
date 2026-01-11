@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activities.RequestService">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <include
+                android:id="@+id/layoutRequestServiceCategory"
+                layout="@layout/layout_new_service_category" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_mlarge" />
+
+            <include
+                android:id="@+id/layoutRequestServiceSubCategory"
+                layout="@layout/layout_new_service_subcategory" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_mlarge" />
+
+            <include
+                android:id="@+id/layoutRequestServiceDescription"
+                layout="@layout/layout_new_service_description" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_mlarge" />
+
+            <include
+                android:id="@+id/layoutRequestServicePreferredDate"
+                layout="@layout/layout_new_service_date" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_mlarge" />
+
+            <include
+                android:id="@+id/layoutRequestServicePreferredTime"
+                layout="@layout/layout_new_service_time" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_mlarge" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmitServiceRequest"
+                style="@style/PrimaryMaterialButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/submit"
+                android:textAllCaps="true" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -20,4 +20,16 @@
     <string name="request_otp">REQUEST OTP</string>
     <string name="login_with_your_number">Login With Your Number</string>
     <string name="request_otp_description">Please enter your mobile number to receive a verification code.</string>
+    <string name="string_continue">Continue</string>
+    <string name="select_service_category">Select Service Category</string>
+    <string name="service_category">Service Category</string>
+    <string name="service_sub_category">Service Sub Category</string>
+    <string name="select_service_sub_category">Select Service Sub Category</string>
+    <string name="service_description">Service Description</string>
+    <string name="enter_service_description">Enter service description</string>
+    <string name="service_date_optional">Service Date (Optional)</string>
+    <string name="select_service_date">Select service date</string>
+    <string name="service_time_optional">Service Time (Optional)</string>
+    <string name="select_service_time">Select service time</string>
+    <string name="submit">Submit</string>
 </resources>
