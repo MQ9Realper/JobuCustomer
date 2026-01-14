@@ -6,8 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import com.jobu.customer.common.AppUtils;
 import com.jobu.customer.databinding.FragmentHomeBinding;
 import com.jobu.customer.ui.activities.RequestService;
+import com.jobu.customer.ui.adapters.AdapterServiceCategories;
 
 /**
  * Home Fragment.
@@ -36,6 +39,9 @@ public class Home extends Fragment {
     // Display job statistics
     showStats();
 
+    // Display service categories
+    showCategories();
+
     // Handle Request Service button click
     binding.btnRequestService.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -63,5 +69,15 @@ public class Home extends Fragment {
     binding.layoutStatistics.txtOngoingJobs.setText("2");
     binding.layoutStatistics.txtCompletedJobs.setText("20");
     binding.layoutStatistics.txtCanceledJobs.setText("2");
+  }
+
+  /**
+   * Display service categories.
+   */
+  private void showCategories() {
+    AdapterServiceCategories adapter = new AdapterServiceCategories(AppUtils.getServiceCategories());
+    binding.layoutServiceCategories.recyclerViewServiceCategories.setAdapter(adapter);
+    binding.layoutServiceCategories.recyclerViewServiceCategories.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+    binding.layoutServiceCategories.recyclerViewServiceCategories.setHasFixedSize(true);
   }
 }

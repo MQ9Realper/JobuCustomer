@@ -2,15 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary">#9C2B2E</color>
-    <color name="primary_light">#C84548</color>
-    <color name="primary_dark">#6F1A1C</color>
-    <color name="secondary">#FFA500</color>
-    <color name="secondary_light">#FFB733</color>
-    <color name="secondary_dark">#CC8400</color>
-    <color name="accent">#00CED1</color>
-    <color name="accent_light">#33D6D9</color>
-    <color name="accent_dark">#009A9C</color>
+    <color name="primary">#00356C</color>
+    <color name="primary_light">#335C8F</color>
+    <color name="primary_dark">#00356C</color>
+    <color name="secondary">#004D8C</color>
+    <color name="secondary_light">#336FAD</color>
+    <color name="secondary_dark">#004D8C</color>
+    <color name="accent">#60A5FA</color>
+    <color name="accent_light">#66C4C6</color>
+    <color name="accent_dark">#60A5FA</color>
+    <color name="buttons">#52b44b</color>
+    <color name="buttons_light">#7cd67a</color>
     <color name="background">#F5F5F5</color>
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>

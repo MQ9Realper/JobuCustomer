@@ -3,10 +3,10 @@
     <string name="home">Home</string>
     <string name="jobs">Jobs</string>
     <string name="profile">Profile</string>
-    <string name="canceled_jobs">Canceled Jobs</string>
-    <string name="completed_jobs">Completed Jobs</string>
-    <string name="ongoing_jobs">Ongoing Jobs</string>
-    <string name="total_jobs">Total Jobs</string>
+    <string name="canceled_jobs">Closed</string>
+    <string name="completed_jobs">Done</string>
+    <string name="ongoing_jobs">Active</string>
+    <string name="total_jobs">Total</string>
     <string name="request_for_service">Request For Service</string>
     <string name="recent_jobs">Recent Jobs</string>
     <string name="no_jobs_found">No Jobs Found</string>
@@ -32,4 +32,5 @@
     <string name="service_time_optional">Service Time (Optional)</string>
     <string name="select_service_time">Select service time</string>
     <string name="submit">Submit</string>
+    <string name="service_categories">Service Categories</string>
 </resources>

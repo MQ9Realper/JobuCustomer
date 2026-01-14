@@ -16,62 +16,59 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp" />
 
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <RelativeLayout
+        <Space
+            android:id="@+id/spaceStatistics"
+            android:layout_width="0dp"
+            android:layout_height="10dp" />
+
+        <include
+            android:id="@+id/layoutStatistics"
+            layout="@layout/layout_dashboard_statistics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_below="@+id/spaceStatistics"
+            android:layout_marginHorizontal="16dp" />
 
-            <Space
-                android:id="@+id/spaceStatistics"
-                android:layout_width="0dp"
-                android:layout_height="10dp" />
+        <Space
+            android:id="@+id/spaceRequestServices"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_below="@+id/layoutStatistics"
+            android:visibility="gone" />
 
-            <include
-                android:id="@+id/layoutStatistics"
-                layout="@layout/layout_dashboard_statistics"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/spaceStatistics"
-                android:layout_marginHorizontal="16dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRequestService"
+            style="@style/PrimaryMaterialButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spaceRequestServices"
+            android:layout_marginHorizontal="16dp"
+            android:padding="16dp"
+            android:text="@string/request_for_service"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:icon="@drawable/rounded_send_24"
+            app:iconGravity="textStart" />
 
-            <Space
-                android:id="@+id/spaceRequestServices"
-                android:layout_width="0dp"
-                android:layout_height="10dp"
-                android:layout_below="@+id/layoutStatistics" />
+        <Space
+            android:id="@+id/spaceRecentActivities"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_below="@+id/btnRequestService" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnRequestService"
-                style="@style/PrimaryMaterialButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/spaceRequestServices"
-                android:layout_marginHorizontal="16dp"
-                android:padding="16dp"
-                android:text="@string/request_for_service"
-                android:textAllCaps="true"
-                app:icon="@drawable/rounded_send_24"
-                app:iconGravity="textStart" />
+        <include
+            android:id="@+id/layoutServiceCategories"
+            layout="@layout/layout_service_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spaceRecentActivities" />
 
-            <Space
-                android:id="@+id/spaceRecentActivities"
-                android:layout_width="0dp"
-                android:layout_height="10dp"
-                android:layout_below="@+id/btnRequestService" />
+    </RelativeLayout>
 
-            <include
-                android:id="@+id/layoutRecentJobs"
-                layout="@layout/layout_recent_jobs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/spaceRecentActivities" />
-
-        </RelativeLayout>
-
-    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

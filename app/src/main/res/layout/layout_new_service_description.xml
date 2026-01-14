@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/roboto_medium"
+        android:fontFamily="@font/lexend_medium"
         android:text="@string/service_description"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
         android:textColor="@color/black" />
@@ -20,7 +20,7 @@
         android:layout_gravity="center_vertical"
         android:autofillHints="false"
         android:background="@drawable/background_textbox"
-        android:fontFamily="@font/roboto_regular"
+        android:fontFamily="@font/lexend_regular"
         android:gravity="top"
         android:hint="@string/enter_service_description"
         android:inputType="textMultiLine"

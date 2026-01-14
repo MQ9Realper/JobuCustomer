@@ -45,7 +45,7 @@
             android:layout_weight="1"
             android:autofillHints="false"
             android:background="@null"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/lexend_regular"
             android:hint="@string/string_enter_phone_number"
             android:inputType="phone"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"

@@ -111,6 +111,8 @@ dependencies {
     implementation libs.constraintlayout
     implementation libs.core.splashscreen
     implementation libs.swiperefreshlayout
+    compileOnly libs.projectlombok.lombok
+    annotationProcessor libs.projectlombok.lombok
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core

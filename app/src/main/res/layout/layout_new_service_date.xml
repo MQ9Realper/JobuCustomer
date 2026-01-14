@@ -8,7 +8,7 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_medium"
+        android:fontFamily="@font/lexend_medium"
         android:layout_marginBottom="8dp"
         android:text="@string/service_date_optional"
         android:textColor="@color/black" />
@@ -32,7 +32,7 @@
             android:cursorVisible="false"
             android:focusable="false"
             android:focusableInTouchMode="false"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/lexend_regular"
             android:hint="@string/select_service_date"
             android:inputType="date"
             android:textColor="@color/black"

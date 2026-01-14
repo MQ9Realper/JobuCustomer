@@ -58,7 +58,7 @@
             android:layout_height="18dp"
             android:layout_gravity="top|end"
             android:background="@drawable/notification_badge"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/lexend_regular"
             android:gravity="center"
             android:textColor="@android:color/white"
             android:textSize="10sp"

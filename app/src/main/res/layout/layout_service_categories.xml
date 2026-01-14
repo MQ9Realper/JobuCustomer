@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:fontFamily="@font/lexend_bold"
-        android:text="@string/recent_jobs"
+        android:text="@string/service_categories"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
         android:textColor="@color/primary" />
 
@@ -19,17 +19,8 @@
         android:layout_height="5dp"
         android:layout_below="@+id/textRecentJobs" />
 
-    <include
-        android:id="@+id/layoutRecentJobsEmptyState"
-        layout="@layout/layout_recent_jobs_empty_state"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spaceAfterRecentJobsLabel"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="50dp" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewRecentJobs"
+        android:id="@+id/recyclerViewServiceCategories"
         android:layout_width="match_parent"
         android:layout_height="600dp"
         android:layout_below="@+id/spaceAfterRecentJobsLabel" />

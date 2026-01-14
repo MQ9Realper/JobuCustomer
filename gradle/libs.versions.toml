@@ -9,8 +9,10 @@ activity = "1.12.2"
 constraintlayout = "2.2.1"
 coreSplashscreen = "1.2.0"
 swiperefreshlayout = "1.2.0"
+lombokVersion = "1.18.42"
 
 [libraries]
+projectlombok-lombok = { module = "org.projectlombok:lombok", version.ref = "lombokVersion" }
 swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefreshlayout" }
 core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
