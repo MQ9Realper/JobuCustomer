@@ -33,4 +33,7 @@
     <string name="select_service_time">Select service time</string>
     <string name="submit">Submit</string>
     <string name="service_categories">Service Categories</string>
+    <string name="national_id">National ID</string>
+    <string name="logout">Logout</string>
+    <string name="logout_description">Logout from the app</string>
 </resources>

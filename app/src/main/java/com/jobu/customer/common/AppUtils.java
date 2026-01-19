@@ -72,4 +72,37 @@ public class AppUtils {
     return categories;
   }
 
+  /**
+   * Extracts initials from a name string.
+   *
+   * @param name the name string
+   * @return the initials
+   */
+  public static String getInitials(String name, int maxLength) {
+    if (name == null || name.trim().isEmpty()) {
+      return "";
+    }
+
+    String trimmedName = name.trim();
+    String[] nameParts = trimmedName.split("\\s+");
+
+    StringBuilder initials = new StringBuilder();
+
+    if (nameParts.length >= 2) {
+      initials.append(nameParts[0].substring(0, 1).toUpperCase());
+      initials.append(nameParts[nameParts.length - 1].substring(0, 1).toUpperCase());
+    } else if (nameParts.length == 1) {
+      String singleName = nameParts[0];
+      int length = Math.min(singleName.length(), maxLength);
+      initials.append(singleName.substring(0, length).toUpperCase());
+    }
+
+    return initials.toString();
+  }
+
+  // Overloaded method with default maxLength of 2
+  public static String getInitials(String name) {
+    return getInitials(name, 2);
+  }
+
 }

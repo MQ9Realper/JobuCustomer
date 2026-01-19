@@ -13,6 +13,7 @@
     <color name="accent_dark">#60A5FA</color>
     <color name="buttons">#52b44b</color>
     <color name="buttons_light">#7cd67a</color>
+    <color name="buttons_lighter">#E8F5E9</color>
     <color name="background">#F5F5F5</color>
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
@@ -22,4 +23,6 @@
     <color name="grey_30">#9E9E9E</color>
     <color name="grey_40">#757575</color>
     <color name="grey_50">#616161</color>
+    <color name="not_verified">#ff0100</color>
+    <color name="not_verified_light">#ffefef</color>
 </resources>

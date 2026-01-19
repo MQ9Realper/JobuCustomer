@@ -1,8 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".ui.fragments.Profile">
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/layoutProfileHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/initialsView"
+            style="@style/TitleTextStyle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textColor="@android:color/white"
+            tools:text="DM" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtUsername"
+                style="@style/TitleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                tools:text="Good Morning" />
+
+            <RelativeLayout
+                android:id="@+id/layoutStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:background="@color/not_verified_light">
+
+                <TextView
+                    android:id="@+id/txtStatus"
+                    style="@style/BoldBodyTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingHorizontal="6dp"
+                    android:textColor="@color/not_verified"
+                    tools:text="VERIFIED" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/spaceProfile"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_below="@+id/layoutProfileHeader" />
+
+    <include
+        android:id="@+id/layoutProfilePhone"
+        layout="@layout/layout_profile_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spaceProfile" />
+
+    <include
+        android:id="@+id/layoutProfileNationalId"
+        layout="@layout/layout_profile_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutProfilePhone" />
+
+    <include
+        android:id="@+id/layoutProfileLogout"
+        layout="@layout/layout_profile_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutProfileNationalId" />
+
+    <TextView
+        android:id="@+id/txtAppVersion"
+        style="@style/BodyTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="App Version v1.0.0"
+        android:textColor="@color/grey_50" />
+
+</RelativeLayout>
