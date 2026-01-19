@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/lexend_medium"
+        android:text="@string/first_name"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/edtFirstNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:autofillHints="false"
+        android:background="@drawable/background_textbox"
+        android:fontFamily="@font/lexend_regular"
+        android:gravity="top"
+        android:hint="@string/enter_your_first_name"
+        android:inputType="textCapSentences"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_40"
+        android:textSize="14sp" />
+
+</LinearLayout>

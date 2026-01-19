@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobuCustomer">
         <activity
+            android:name=".ui.activities.Register"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.RequestService"
             android:exported="false" />
         <activity
