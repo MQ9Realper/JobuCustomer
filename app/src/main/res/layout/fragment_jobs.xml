@@ -37,20 +37,6 @@
             android:layout_centerInParent="true"
             android:layout_marginHorizontal="16dp" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabAddJob"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/rounded_add_24"
-            app:backgroundTint="@color/primary"
-            app:rippleColor="@color/primary_light"
-            app:tint="@color/white" />
-
     </RelativeLayout>
 
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

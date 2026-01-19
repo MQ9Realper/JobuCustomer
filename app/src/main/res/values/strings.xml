@@ -46,4 +46,5 @@
     <string name="no_notifications">No Notifications</string>
     <string name="string_mark_all_as_read"><u>Mark all as read</u></string>
     <string name="no_notifications_description">No notifications at the moment. New notifications will be seen here.</string>
+    <string name="book_service">Book Service</string>
 </resources>

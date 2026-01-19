@@ -8,6 +8,7 @@ import com.jobu.customer.common.AppUtils;
 import com.jobu.customer.data.models.dto.ServiceSubCategory;
 import com.jobu.customer.databinding.ActivitySelectSubCategoriesBinding;
 import com.jobu.customer.ui.adapters.AdapterServiceSubCategories;
+import com.jobu.customer.ui.bottomsheets.BottomSheetBookService;
 
 /**
  * Select SubCategories Activity.
@@ -50,7 +51,7 @@ public class SelectSubCategories extends AppCompatActivity {
     adapter.setServiceClickListener(new AdapterServiceSubCategories.OnItemClickListener() {
       @Override
       public void onItemClick(ServiceSubCategory serviceSubCategory) {
-
+        showBookServiceDialog(serviceSubCategory.getName());
       }
     });
     binding.recyclerViewSubCategories.setAdapter(adapter);
@@ -62,6 +63,17 @@ public class SelectSubCategories extends AppCompatActivity {
   public boolean onSupportNavigateUp() {
     finish();
     return true;
+  }
+
+  /**
+   * Show the book service bottom sheet dialog.
+   *
+   * @param subCategory The selected subcategory
+   */
+  private void showBookServiceDialog(String subCategory) {
+    BottomSheetBookService bottomSheetBookService = new BottomSheetBookService();
+    bottomSheetBookService.setSubcategory(subCategory);
+    bottomSheetBookService.show(getSupportFragmentManager(), "BottomSheetBookService");
   }
 
 }

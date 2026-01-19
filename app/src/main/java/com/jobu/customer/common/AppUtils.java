@@ -1,5 +1,6 @@
 package com.jobu.customer.common;
 
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.jobu.customer.R;
@@ -182,6 +183,16 @@ public class AppUtils {
   // Overloaded method with default maxLength of 2
   public static String getInitials(String name) {
     return getInitials(name, 2);
+  }
+
+  /**
+   * Displays a toast message.
+   *
+   * @param activity The activity context.
+   * @param message  The message to display.
+   */
+  public static void showToast(AppCompatActivity activity, String message) {
+    Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
   }
 
 }

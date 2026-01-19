@@ -13,41 +13,24 @@
         android:text="@string/service_sub_category"
         android:textColor="@color/black" />
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/serviceSubCategoryEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:autofillHints="false"
         android:background="@drawable/background_textbox"
-        android:orientation="horizontal"
+        android:fontFamily="@font/lexend_regular"
+        android:gravity="top"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="@string/select_service_sub_category"
+        android:inputType="textMultiLine"
         android:paddingHorizontal="10dp"
-        android:paddingVertical="12dp">
-
-        <EditText
-            android:id="@+id/serviceSubCategoryEditText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:autofillHints="false"
-            android:background="@null"
-            android:cursorVisible="false"
-            android:focusable="false"
-            android:focusableInTouchMode="false"
-            android:fontFamily="@font/lexend_regular"
-            android:hint="@string/select_service_sub_category"
-            android:inputType="textCapWords"
-            android:textColor="@color/black"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
-            android:textColorHint="@color/grey_50"
-            android:textSize="14sp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            android:src="@drawable/rounded_arrow_right_alt_24" />
-
-    </LinearLayout>
+        android:paddingVertical="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_40"
+        android:textSize="14sp" />
 
 </LinearLayout>

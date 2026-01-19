@@ -34,7 +34,7 @@
 
         <TextView
             android:id="@+id/txtSubCategoryName"
-            style="@style/ListTitleStyle"
+            style="@style/ListBodyStyle"
             android:layout_gravity="center_vertical"
             android:layout_width="0dp"
             android:layout_weight="1"
