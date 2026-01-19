@@ -59,7 +59,7 @@
             android:layout_height="24dp"
             android:layout_gravity="center_vertical"
             android:contentDescription="@string/app_name"
-            app:srcCompat="@drawable/rounded_arrow_forward_24" />
+            app:srcCompat="@drawable/baseline_chevron_right_24" />
 
     </LinearLayout>
 

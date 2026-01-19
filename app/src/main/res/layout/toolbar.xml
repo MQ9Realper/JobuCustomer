@@ -5,4 +5,5 @@
     android:layout_height="?actionBarSize"
     android:background="@color/primary"
     app:navigationIcon="@drawable/rounded_keyboard_backspace_24"
+    app:subtitleTextAppearance="@style/SubTitleTextStyle"
     app:titleTextAppearance="@style/ToolbarTitleText" />

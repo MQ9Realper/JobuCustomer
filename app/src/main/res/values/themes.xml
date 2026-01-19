@@ -94,6 +94,12 @@
         <item name="android:fontFamily">@font/lexend_medium</item>
     </style>
 
+    <style name="ToolbarSubTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/lexend_light</item>
+    </style>
+
     <style name="PrimaryMaterialButton" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">@color/buttons</item>
         <item name="android:textColor">@color/white</item>

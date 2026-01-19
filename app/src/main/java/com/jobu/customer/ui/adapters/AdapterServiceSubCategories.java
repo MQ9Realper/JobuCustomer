@@ -4,23 +4,24 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.jobu.customer.data.models.dto.ServiceCategory;
-import com.jobu.customer.databinding.LayoutServiceCategoryListItemBinding;
+import com.jobu.customer.common.AppUtils;
+import com.jobu.customer.data.models.dto.ServiceSubCategory;
+import com.jobu.customer.databinding.LayoutSubcategoriesListItemBinding;
 import java.util.ArrayList;
 
 /**
- * Adapter for Service Categories.
+ * Adapter for Service Sub Categories.
  */
-public class AdapterServiceCategories extends RecyclerView.Adapter<AdapterServiceCategories.ViewHolder> {
-  private final ArrayList<ServiceCategory> serviceCategories;
+public class AdapterServiceSubCategories extends RecyclerView.Adapter<AdapterServiceSubCategories.ViewHolder> {
+  private final ArrayList<ServiceSubCategory> serviceCategories;
   private OnItemClickListener itemClickListener;
 
   /**
-   * Constructor for AdapterServiceCategories.
+   * Constructor for AdapterServiceSubCategories.
    *
    * @param serviceCategories List of service categories
    */
-  public AdapterServiceCategories(ArrayList<ServiceCategory> serviceCategories) {
+  public AdapterServiceSubCategories(ArrayList<ServiceSubCategory> serviceCategories) {
     this.serviceCategories = serviceCategories;
   }
 
@@ -28,9 +29,9 @@ public class AdapterServiceCategories extends RecyclerView.Adapter<AdapterServic
    * ViewHolder class for service category items.
    */
   public static class ViewHolder extends RecyclerView.ViewHolder {
-    private final LayoutServiceCategoryListItemBinding binding;
+    private final LayoutSubcategoriesListItemBinding binding;
 
-    public ViewHolder(LayoutServiceCategoryListItemBinding binding) {
+    public ViewHolder(LayoutSubcategoriesListItemBinding binding) {
       super(binding.getRoot());
       this.binding = binding;
     }
@@ -39,15 +40,15 @@ public class AdapterServiceCategories extends RecyclerView.Adapter<AdapterServic
   @NonNull
   @Override
   public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    LayoutServiceCategoryListItemBinding binding = LayoutServiceCategoryListItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+    LayoutSubcategoriesListItemBinding binding = LayoutSubcategoriesListItemBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
     return new ViewHolder(binding);
   }
 
   @Override
   public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-    ServiceCategory category = serviceCategories.get(position);
-    holder.binding.txtServiceCategory.setText(category.getName());
-    holder.binding.iconServiceCategory.setImageResource(category.getIconResId());
+    ServiceSubCategory category = serviceCategories.get(position);
+    holder.binding.txtSubCategoryName.setText(category.getName());
+    holder.binding.initialsView.setText(AppUtils.getInitials(category.getName()));
     holder.itemView.setOnClickListener(view -> {
       if (itemClickListener != null) {
         itemClickListener.onItemClick(category);
@@ -61,9 +62,9 @@ public class AdapterServiceCategories extends RecyclerView.Adapter<AdapterServic
   }
 
   /**
-   * Set the item click listener for service categories.
+   * Set the item click listener.
    *
-   * @param listener The listener to handle item clicks
+   * @param listener The listener to set
    */
   public void setServiceClickListener(OnItemClickListener listener) {
     this.itemClickListener = listener;
@@ -75,11 +76,10 @@ public class AdapterServiceCategories extends RecyclerView.Adapter<AdapterServic
   public interface OnItemClickListener {
 
     /**
-     * Called when a service category item is clicked.
+     * Called when a service subcategory item is clicked.
      *
-     * @param category The clicked service category
+     * @param serviceSubCategory The clicked service subcategory
      */
-    void onItemClick(ServiceCategory category);
-
+    void onItemClick(ServiceSubCategory serviceSubCategory);
   }
 }

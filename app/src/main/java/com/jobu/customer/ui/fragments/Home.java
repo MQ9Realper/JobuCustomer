@@ -8,8 +8,11 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.jobu.customer.common.AppUtils;
+import com.jobu.customer.data.models.dto.ServiceCategory;
 import com.jobu.customer.databinding.FragmentHomeBinding;
+import com.jobu.customer.ui.activities.Notifications;
 import com.jobu.customer.ui.activities.RequestService;
+import com.jobu.customer.ui.activities.SelectSubCategories;
 import com.jobu.customer.ui.adapters.AdapterServiceCategories;
 
 /**
@@ -50,6 +53,14 @@ public class Home extends Fragment {
       }
     });
 
+    // Handle notifications button click
+    binding.layoutHeader.notificationsContainer.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        startActivity(new Intent(getActivity(), Notifications.class));
+      }
+    });
+
     return binding.getRoot();
   }
 
@@ -76,6 +87,14 @@ public class Home extends Fragment {
    */
   private void showCategories() {
     AdapterServiceCategories adapter = new AdapterServiceCategories(AppUtils.getServiceCategories());
+    adapter.setServiceClickListener(new AdapterServiceCategories.OnItemClickListener() {
+      @Override
+      public void onItemClick(ServiceCategory category) {
+        Intent intent = new Intent(getActivity(), SelectSubCategories.class);
+        intent.putExtra("service_category", category.getName());
+        startActivity(intent);
+      }
+    });
     binding.layoutServiceCategories.recyclerViewServiceCategories.setAdapter(adapter);
     binding.layoutServiceCategories.recyclerViewServiceCategories.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
     binding.layoutServiceCategories.recyclerViewServiceCategories.setHasFixedSize(true);

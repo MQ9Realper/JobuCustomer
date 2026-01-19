@@ -43,4 +43,7 @@
     <string name="national_id_number">National ID Number</string>
     <string name="enter_your_national_id_number"><font size="15">Enter your national ID number</font></string>
     <string name="register">Create Account</string>
+    <string name="no_notifications">No Notifications</string>
+    <string name="string_mark_all_as_read"><u>Mark all as read</u></string>
+    <string name="no_notifications_description">No notifications at the moment. New notifications will be seen here.</string>
 </resources>
