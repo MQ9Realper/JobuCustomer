@@ -30,6 +30,9 @@ public class VerifyOtp extends AppCompatActivity {
       }
     });
 
+    // Apply insets
+    AppUtils.handleWindowInsets(VerifyOtp.this, binding.main);
+
   }
 
   @Override

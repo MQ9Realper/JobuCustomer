@@ -1,7 +1,18 @@
 package com.jobu.customer.common;
 
+import android.app.Activity;
+import android.graphics.Color;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.jobu.customer.R;
 import com.jobu.customer.data.models.dto.ServiceCategory;
@@ -209,6 +220,59 @@ public class AppUtils {
     DateTime dateTime = new DateTime(date);
     DateTimeFormatter formatter = DateTimeFormat.forPattern("dd MMM yyyy");
     return formatter.print(dateTime);
+  }
+
+
+  /**
+   * This method handles window insets for an activity.
+   *
+   * @param activity the activity
+   * @param mainView the main view
+   */
+  public static void handleWindowInsets(Activity activity, View mainView) {
+    Window window = activity.getWindow();
+    window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+    window.setStatusBarColor(ContextCompat.getColor(activity, R.color.primary));
+    ViewCompat.setOnApplyWindowInsetsListener(mainView, (v, insets) -> {
+      Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+      Insets displayCutout = insets.getInsets(WindowInsetsCompat.Type.displayCutout());
+      v.setPadding(
+          Math.max(systemBars.left, displayCutout.left),
+          Math.max(systemBars.top, displayCutout.top),
+          Math.max(systemBars.right, displayCutout.right),
+          Math.min(systemBars.bottom, displayCutout.bottom)
+      );
+      updateSystemBarIconAppearance(activity);
+      return insets;
+    });
+  }
+
+  /**
+   * This method updates the system bar icon appearance based on the toolbar color.
+   *
+   * @param activity the activity
+   */
+  private static void updateSystemBarIconAppearance(Activity activity) {
+    WindowInsetsControllerCompat insetsController = WindowCompat.getInsetsController(activity.getWindow(), activity.getWindow().getDecorView());
+    int toolbarColor = ContextCompat.getColor(activity, R.color.primary);
+    boolean isLightToolbar = isColorLight(toolbarColor);
+    insetsController.setAppearanceLightStatusBars(isLightToolbar);
+    insetsController.setAppearanceLightNavigationBars(isLightToolbar);
+  }
+
+  /**
+   * This method checks if a color is light or dark.
+   *
+   * @param color the color
+   * @return true if the color is light, false otherwise
+   */
+  private static boolean isColorLight(int color) {
+    int red = Color.red(color);
+    int green = Color.green(color);
+    int blue = Color.blue(color);
+    double luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
+    return luminance > 0.5;
   }
 
 }

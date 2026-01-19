@@ -20,6 +20,9 @@ public class Notifications extends AppCompatActivity {
     // Init toolbar
     AppUtils.initToolbar(this, binding.toolbar.getRoot(), "Notifications", true);
 
+    // Apply insets
+    AppUtils.handleWindowInsets(Notifications.this, binding.main);
+
   }
 
   @Override

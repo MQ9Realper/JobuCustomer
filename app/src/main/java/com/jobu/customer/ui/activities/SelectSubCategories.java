@@ -28,6 +28,9 @@ public class SelectSubCategories extends AppCompatActivity {
     // Show subcategories
     showSubCategories();
 
+    // Apply insets
+    AppUtils.handleWindowInsets(SelectSubCategories.this, binding.main);
+
   }
 
   /**

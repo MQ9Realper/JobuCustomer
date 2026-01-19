@@ -20,6 +20,9 @@ public class Register extends AppCompatActivity {
     // Init toolbar
     AppUtils.initToolbar(this, binding.toolbar.getRoot(), "Create Account", true);
 
+    // Apply insets
+    AppUtils.handleWindowInsets(Register.this, binding.main);
+
   }
 
   @Override

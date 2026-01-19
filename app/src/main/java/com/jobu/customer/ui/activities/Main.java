@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.navigation.NavigationBarView;
 import com.jobu.customer.R;
+import com.jobu.customer.common.AppUtils;
 import com.jobu.customer.databinding.ActivityMainBinding;
 import com.jobu.customer.ui.adapters.AdapterBottomNavigation;
 
@@ -23,6 +24,9 @@ public class Main extends AppCompatActivity {
 
     // Setup bottom navigation
     setupBottomNavigation();
+
+    // Apply insets
+    AppUtils.handleWindowInsets(Main.this, binding.main);
 
   }
 
