@@ -111,6 +111,7 @@ dependencies {
     implementation libs.constraintlayout
     implementation libs.core.splashscreen
     implementation libs.swiperefreshlayout
+    implementation libs.joda.time
     compileOnly libs.projectlombok.lombok
     annotationProcessor libs.projectlombok.lombok
     testImplementation libs.junit

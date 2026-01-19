@@ -7,6 +7,10 @@ import com.jobu.customer.R;
 import com.jobu.customer.data.models.dto.ServiceCategory;
 import com.jobu.customer.data.models.dto.ServiceSubCategory;
 import java.util.ArrayList;
+import java.util.Date;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 /**
  * Utility class for common app functions.
@@ -193,6 +197,18 @@ public class AppUtils {
    */
   public static void showToast(AppCompatActivity activity, String message) {
     Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
+  }
+
+  /**
+   * Formats a Date object to a string in the format "dd MMM yyyy".
+   *
+   * @param date the date to format.
+   * @return the formatted date as a string.
+   */
+  public static String formatCalendarDate(Date date) {
+    DateTime dateTime = new DateTime(date);
+    DateTimeFormatter formatter = DateTimeFormat.forPattern("dd MMM yyyy");
+    return formatter.print(dateTime);
   }
 
 }

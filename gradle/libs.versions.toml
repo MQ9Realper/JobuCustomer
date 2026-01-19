@@ -10,8 +10,10 @@ constraintlayout = "2.2.1"
 coreSplashscreen = "1.2.0"
 swiperefreshlayout = "1.2.0"
 lombokVersion = "1.18.42"
+jodaTime = "2.14.0"
 
 [libraries]
+joda-time = { module = "joda-time:joda-time", version.ref = "jodaTime" }
 projectlombok-lombok = { module = "org.projectlombok:lombok", version.ref = "lombokVersion" }
 swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefreshlayout" }
 core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
